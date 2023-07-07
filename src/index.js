@@ -1,4 +1,3 @@
-const table = require("@makeitrealcamp/db-mock");
 const express = require('express');
 const cors = require('cors');
 
