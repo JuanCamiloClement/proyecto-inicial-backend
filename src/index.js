@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
@@ -11,7 +12,7 @@ const {
 
 const app = express();
 
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -30,6 +31,6 @@ app.put('/products/:id',handleUpdateProduct);
 
 app.delete('/products/:id',handleDeleteProduct);
 
-app.listen(port,() => {
-    console.log(`Successfully running at http://localhost:${port}`)
+app.listen(PORT,() => {
+    console.log(`Successfully running at http://localhost:${PORT}`)
 });
